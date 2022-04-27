@@ -43,21 +43,21 @@ function handleTouchmove(e) {
     xPos: e.touches[0].clientX,
     yPos: e.touches[0].clientY
   }
-  if (!(
+  if (
     Object.keys(priorTouch).length > 0 &&
     (
       Math.abs(priorTouch.xPos - touch.xPos) > 20 ||
       Math.abs(priorTouch.yPos - touch.yPos) > 20
     )
-  )) {
+  ) {
+    isThrowing = true
+    ball.xVelocity = touch.xPos - priorTouch.xPos
+    ball.yVelocity = touch.yPos - priorTouch.yPos
+  } else {
     if (isThrowing == false) {
       player.xPos = touch.xPos
       player.yPos = touch.yPos
     }
-  } else {
-    isThrowing = true
-    ball.xVelocity = touch.xPos - priorTouch.xPos
-    ball.yVelocity = touch.yPos - priorTouch.yPos
   }
   ball.xPos = touch.xPos
   ball.yPos = touch.yPos
