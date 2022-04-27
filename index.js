@@ -34,7 +34,7 @@ function gameLoop() {
   moveBall()
   drawPlayer()
   drawBall()
-  setTimeout(runGame, 50)
+  setTimeout(gameLoop, 50)
 }
 
 function handleTouchmove(e) {
