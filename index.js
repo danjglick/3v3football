@@ -71,7 +71,6 @@ function gameLoop() {
 }
 
 function handleTouchstart(e) {
-  console.log(1)
   let touch = {
     xPos: e.touches[0].clientX,
     yPos: e.touches[0].clientY
