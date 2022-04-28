@@ -117,7 +117,6 @@ function handleTouchmove(e) {
 
 function handleTouchend() {
   isSendingWr1 = false
-  isMovingQb = false
 }
 
 /////// public /////////
