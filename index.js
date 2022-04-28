@@ -64,6 +64,10 @@ function gameLoop() {
       players.user.offense.wr1.yPos = wr1Path[0].yPos
       wr1Path.shift()
     }
+    if (isClose(ball, players.user.offense.wr1)) {
+      ball.xVelocity = 0
+      ball.yVelocity = 0
+    }
   }
   drawPlayers()
   drawBall()
